@@ -22,7 +22,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          server-id: github   # MUST match pom.xml
+          server-id: moback4um-github   # MUST match pom.xml
           settings-path: ${{ github.workspace }}
 
       - name: Build & Deploy to GitHub Packages
