@@ -11,7 +11,7 @@ jobs:
 
     permissions:
       contents: read
-      packages: write   # REQUIRED for publishing
+      packages: write
 
     steps:
       - name: Checkout code
@@ -22,10 +22,10 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          server-id: moback4um-github   # MUST match pom.xml
+          server-id: github
           settings-path: ${{ github.workspace }}
 
-      - name: Build & Deploy to GitHub Packages
+      - name: Build & Deploy
         run: mvn clean deploy -DskipTests
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
