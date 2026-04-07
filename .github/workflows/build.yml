@@ -27,3 +27,5 @@ jobs:
 
       - name: Build & Deploy to GitHub Packages
         run: mvn clean deploy -DskipTests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
