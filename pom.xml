@@ -52,7 +52,7 @@
 
  <distributionManagement>
 		<repository>
-		  <id>moback4um-github</id>
+		  <id>github</id>
 		  <name>JeevanMgts</name>
 		  <url>https://maven.pkg.github.com/JeevanMgts/demo-platfrom</url>
 		</repository>

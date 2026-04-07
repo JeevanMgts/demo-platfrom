@@ -22,8 +22,7 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
-          server-id: github
-          settings-path: ${{ github.workspace }}
+          server-id: github   # MUST match pom.xml
 
       - name: Build & Deploy
         run: mvn clean deploy -DskipTests
